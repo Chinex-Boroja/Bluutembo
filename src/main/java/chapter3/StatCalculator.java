@@ -6,9 +6,9 @@ public class StatCalculator {
 
     public int minimumValue(int[] numArray){
         int value = numArray[0];
-        for(int i = 0; i < numArray.length; i++ ) {
-            if (numArray[i] < value) {
-                value = numArray[i];
+        for (int j : numArray) {
+            if (j < value) {
+                value = j;
             }
         }
         return value;
@@ -16,10 +16,10 @@ public class StatCalculator {
 
     public int maximumValue(int[] numArray) {
         int maxValue = numArray[0];
-        for (int i = 0; i < numArray.length; i++) {
+        for (int j : numArray) {
 
-            if (numArray[i] > maxValue) {
-                maxValue = numArray[i];
+            if (j > maxValue) {
+                maxValue = j;
             }
         }
         return maxValue;
@@ -38,8 +38,8 @@ public class StatCalculator {
         int count = 0;
         double sum = 0;
 
-        for (int i = 0; i < numArray.length; i++) {
-            sum += numArray[i];
+        for (int j : numArray) {
+            sum += j;
             count++;
         }
 
